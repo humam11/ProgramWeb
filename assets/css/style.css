@@ -6023,6 +6023,7 @@ width: 48.1%;
   color: #000;
   padding-top: 50px;
   background-size: 50% 150%, 100% auto;
+  margin-bottom: 0;
 }
 
 
@@ -6538,8 +6539,15 @@ background-color: #ffffff00 !important;
 }
 
 section.news-cards {
+  margin: 0 !important;
   padding-bottom: 100px;
+
 }
+
+section.news-cards.slider:not(.no-pics) {
+  padding-bottom: 140px;
+}
+
 
 .news-cards h1, .news-cards h2{
   font-weight: 400;
@@ -6805,6 +6813,11 @@ section.news-cards {
   color: #000;
   position: relative;
   z-index: 2;
+}
+
+section.news-cards.no-pics {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
