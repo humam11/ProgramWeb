@@ -328,24 +328,20 @@ form > *:nth-child(n+2):not(:last-child) {
 section {
   overflow: hidden;
 }
-main > section:nth-child(even) {
-  margin: 80px 0;
+main:not(.about-us-page) > section:nth-child(even):not(:first-of-type):not(:last-of-type) {
+  padding: 100px 0;
 }
-
-
-
-main > section:first-of-type:not(.steps-work) {
-  margin-top: 0 !important;
-}
-
-
-
 main > section:last-of-type {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
-main.desgin-details > section:nth-child(even) {
-  margin: 50px 0;
+
+main.about-us-page > section:nth-child(odd):not(:first-of-type):not(:last-of-type) {
+  padding: 100px 0;
+}
+
+main.desgin-details > section:nth-child(even):not(:first-of-type):not(:last-of-type) {
+  padding: 50px 0;
 }
 
 
@@ -2610,7 +2606,7 @@ input[type="checkbox"]:checked {
   overflow:visible!important;
   margin:100px 0;
   width:100%;
-  padding: 50px 0;
+  padding: 50px 0 !important;
   color: #fff;
 }
 
@@ -2883,28 +2879,17 @@ flex-direction: row-reverse;
   border-bottom: 25px solid transparent;
 }
 
-.tariffs .swiper-buttons,
-.pages-swiper .swiper-buttons {
-  height: fit-content;
-  margin-top: 50px;
+.swiper-buttons,
+.swiper-buttons {
+  height: 47px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-
-.news-cards.slider .swiper-buttons {
-  display: flex;
-  justify-content: center;
-  height: 49px;
-}
-
-.tariffs .swiper-buttons .swiper-button-prev,
-.tariffs .swiper-buttons .swiper-button-next,
-.pages-swiper .swiper-buttons .swiper-button-prev,
-.pages-swiper .swiper-buttons .swiper-button-next,
-.news-cards.slider .swiper-buttons .swiper-button-prev
-.news-cards.slider .swiper-buttons .swiper-button-next {
+.swiper-buttons .swiper-button-prev
+.swiper-buttons .swiper-button-next {
   top: unset;
   bottom: 0;
   cursor: pointer;
@@ -3580,16 +3565,7 @@ flex-direction: row-reverse;
   }
 }
 
-.clients {
-  padding: 20px 0;
-}
-
-
 /* contact section*/
-
-.contact {
-  padding-bottom: 0px;
-}
 .contact .container-fluid {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -4442,6 +4418,9 @@ footer .contact-info {
 }
 
 /* typography */
+.h1-details {
+  margin-bottom: 50px;
+}
 .h1-details h1 {
   margin-bottom: 25px;
 }
@@ -5205,6 +5184,7 @@ tbody th {
   position: relative;
   overflow: visible;
   min-height: 285px;
+  margin-bottom: 100px;
 }
 
 .breadcrumbs.about-us img {
@@ -6024,6 +6004,7 @@ width: 48.1%;
   padding-top: 50px;
   background-size: 50% 150%, 100% auto;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 
@@ -6544,11 +6525,6 @@ section.news-cards {
 
 }
 
-section.news-cards.slider:not(.no-pics) {
-  padding-bottom: 140px;
-}
-
-
 .news-cards h1, .news-cards h2{
   font-weight: 400;
   color: #2C3440;
@@ -6696,9 +6672,7 @@ section.news-cards.slider:not(.no-pics) {
   left: 6px;
 }
 
-.news-cards.slider .swiper-buttons {
-  padding-top: calc(var(--bs-gutter-x)* .5 + 35px);
-}
+
 
 
 
